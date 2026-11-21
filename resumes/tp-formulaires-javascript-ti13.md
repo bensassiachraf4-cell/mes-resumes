@@ -1,7 +1,7 @@
 # TP : Les formulaires JavaScript (TI13)
 
 Matière : Développement web côté client (JavaScript et DOM)
-√âtablissement : ISET Nabeul
+Établissement : ISET Nabeul
 Classe : TI13
 Durée indicative : 3 heures
 
