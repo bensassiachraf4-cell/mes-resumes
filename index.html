@@ -1,33 +1,134 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Mes résumés de cours</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
-    h1 { font-size: 1.6rem; }
-    ul { padding-left: 1.2rem; }
-    li { margin: 0.5rem 0; }
-    .note { background: #f4f4f4; padding: 0.8rem 1rem; border-radius: 6px; font-size: 0.95rem; }
+    :root {
+      --bleu: #1d4ed8;
+      --bleu-clair: #e0ebff;
+      --texte: #1f2937;
+      --gris: #6b7280;
+      --fond: #f5f7fb;
+      --blanc: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--fond);
+      color: var(--texte);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      color: var(--blanc);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+    header p { margin: 0 auto; max-width: 620px; opacity: 0.92; }
+    main { max-width: 980px; margin: -1.5rem auto 3rem; padding: 0 1.25rem; }
+    section {
+      background: var(--blanc);
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 { margin: 0 0 0.4rem; font-size: 1.35rem; color: var(--bleu); }
+    .sous-titre { color: var(--gris); margin: 0 0 1.25rem; font-size: 0.95rem; }
+    .avis {
+      background: var(--bleu-clair);
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      font-size: 0.93rem;
+      margin-bottom: 1.25rem;
+    }
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 0.9rem;
+    }
+    .carte {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #dbe3f0;
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      text-decoration: none;
+      color: var(--texte);
+      font-weight: 600;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .carte:hover, .carte:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(29, 78, 216, 0.15);
+      border-color: var(--bleu);
+      outline: none;
+    }
+    .carte span.fleche { color: var(--bleu); font-size: 1.1rem; }
+    .vide {
+      border: 2px dashed #cbd5e1;
+      border-radius: 10px;
+      padding: 1.2rem;
+      color: var(--gris);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    footer { text-align: center; color: var(--gris); font-size: 0.85rem; padding: 1rem; }
+    @media (max-width: 520px) {
+      header h1 { font-size: 1.6rem; }
+      section { padding: 1.25rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>Mes résumés de cours</h1>
-  <p class="note">Ces liens mènent à Google Classroom. Chaque personne doit se connecter avec un compte Google autorisé pour accéder à un cours. Les contenus ne sont pas copiés sur ce site.</p>
+  <header>
+    <h1>Mes résumés de cours</h1>
+    <p>Une page simple pour retrouver les cours de Google Classroom et, bientôt, les résumés en vidéo et en podcast.</p>
+  </header>
 
-  <h2>Cours Google Classroom</h2>
-  <ul>
-    <li><a href="https://classroom.google.com/c/ODkyMTAxMDQyNTk1" target="_blank" rel="noopener noreferrer">Cours Classroom 1</a></li>
-    <li><a href="https://classroom.google.com/c/ODg4NDM0NzEwOTgw" target="_blank" rel="noopener noreferrer">Cours Classroom 2</a></li>
-    <li><a href="https://classroom.google.com/c/ODg2NzYwNzAyNDE0" target="_blank" rel="noopener noreferrer">Cours Classroom 3</a></li>
-    <li><a href="https://classroom.google.com/c/ODg1MzU5NzEyMDE4" target="_blank" rel="noopener noreferrer">Cours Classroom 4</a></li>
-    <li><a href="https://classroom.google.com/c/ODg1MTk1NjU3NTgw" target="_blank" rel="noopener noreferrer">Cours Classroom 5</a></li>
-    <li><a href="https://classroom.google.com/c/ODc4NTc1NTk0NjIx" target="_blank" rel="noopener noreferrer">Cours Classroom 6</a></li>
-    <li><a href="https://classroom.google.com/c/ODg0Nzg4NTMxMjU0" target="_blank" rel="noopener noreferrer">Cours Classroom 7</a></li>
-    <li><a href="https://classroom.google.com/c/ODg0OTE0NjMzMzYy" target="_blank" rel="noopener noreferrer">Cours Classroom 8</a></li>
-    <li><a href="https://classroom.google.com/c/NzEzMjQ2OTQyNzkx" target="_blank" rel="noopener noreferrer">Cours Classroom 9</a></li>
-    <li><a href="https://classroom.google.com/c/ODg3MDE4MDMzNDcx" target="_blank" rel="noopener noreferrer">Cours Classroom 10</a></li>
-  </ul>
+  <main>
+    <section id='classroom'>
+      <h2>Cours Google Classroom</h2>
+      <p class='sous-titre'>Dix cours, un lien par cours.</p>
+      <p class='avis'>Chaque lien ouvre Google Classroom. Il faut vous connecter avec un compte Google autorisé pour accéder à un cours. Ce site n'affiche pas le contenu des cours.</p>
+      <div class='grille'>
+        <a class='carte' href='https://classroom.google.com/c/ODkyMTAxMDQyNTk1' target='_blank' rel='noopener noreferrer'>Cours Classroom 1 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg4NDM0NzEwOTgw' target='_blank' rel='noopener noreferrer'>Cours Classroom 2 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg2NzYwNzAyNDE0' target='_blank' rel='noopener noreferrer'>Cours Classroom 3 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg1MzU5NzEyMDE4' target='_blank' rel='noopener noreferrer'>Cours Classroom 4 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg1MTk1NjU3NTgw' target='_blank' rel='noopener noreferrer'>Cours Classroom 5 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODc4NTc1NTk0NjIx' target='_blank' rel='noopener noreferrer'>Cours Classroom 6 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg0Nzg4NTMxMjU0' target='_blank' rel='noopener noreferrer'>Cours Classroom 7 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg0OTE0NjMzMzYy' target='_blank' rel='noopener noreferrer'>Cours Classroom 8 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/NzEzMjQ2OTQyNzkx' target='_blank' rel='noopener noreferrer'>Cours Classroom 9 <span class='fleche'>&rarr;</span></a>
+        <a class='carte' href='https://classroom.google.com/c/ODg3MDE4MDMzNDcx' target='_blank' rel='noopener noreferrer'>Cours Classroom 10 <span class='fleche'>&rarr;</span></a>
+      </div>
+    </section>
+
+    <section id='resumes'>
+      <h2>Résumés, vidéos et podcasts</h2>
+      <p class='sous-titre'>Seuls les contenus dont les droits sont confirmés sont publiés.</p>
+      <div class='vide'>
+        <span class='badge'>En attente</span>
+        <p>Aucune vidéo ni aucun podcast n'est publié pour l'instant. Les résumés seront ajoutés ici une fois leurs droits confirmés.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Mes résumés de cours</footer>
 </body>
 </html>
